@@ -1,0 +1,22 @@
+@startuml
+hide footbox
+!theme plain
+skinparam backgroundcolor transparent
+
+' Turquoise #668c97
+' Orange #F6921E
+
+participant "Notebook\nAE" as AE 
+box "CSE & Hosted Resources" #f8f8f8
+participant "CSE" as CSE 
+participant "StreetLight-AE-1\nLight-Container-1" as container1 #F6921E
+participant "StreetLight-AE-2\nLight-Container-2" as container2 #F6921E
+end box
+
+
+AE -> CSE ++: CREATE <group>\ncse-in
+CSE <--> container1: Validate and add\n<cnt> to Lights-Group
+CSE <--> container2: Validate and add\n<cnt> to Lights-Group
+AE <- CSE --: Response
+
+@enduml

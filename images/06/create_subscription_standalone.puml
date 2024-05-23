@@ -1,0 +1,17 @@
+@startuml
+hide footbox
+!theme plain
+skinparam backgroundcolor transparent
+
+box "Streetlight 1 Notebooks" #f8f8f8
+participant "Streetlight-1\nAE" as AE1
+participant "Notification\nReceiver" as NS
+end box
+
+participant "CSE" as CSE 
+
+box "Streetlight 2" #f8f8f8
+participant "Streetlight-2\nAE" as AE2
+end box
+
+@enduml
